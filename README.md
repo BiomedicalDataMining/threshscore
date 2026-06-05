@@ -248,17 +248,17 @@ result = threshscore.score_from_predictions(y_true, y_pred, gate="step")
 
 ## Documentation
 
-- [Quickstart guide](docs/quickstart.md)
-- [API reference](docs/api_reference.md)
-- [Example notebook](docs/examples/basic_usage.ipynb)
+- [Quickstart guide](https://github.com/BiomedicalDataMining/threshscore/blob/main/docs/quickstart.md)
+- [API reference](https://github.com/BiomedicalDataMining/threshscore/blob/main/docs/api_reference.md)
+- [Example notebook](https://github.com/BiomedicalDataMining/threshscore/blob/main/docs/examples/basic_usage.ipynb)
 
 ## Contributing
 
 threshscore is primarily a reproducible research tool accompanying an IEEE publication.
 Bug reports and questions are welcome via
 [GitHub Issues](https://github.com/BiomedicalDataMining/threshscore/issues).
-For code contributions (new gate functions, fixes), see [CONTRIBUTING.md](CONTRIBUTING.md).
+For code contributions (new gate functions, fixes), see [CONTRIBUTING.md](https://github.com/BiomedicalDataMining/threshscore/blob/main/CONTRIBUTING.md).
 
 ## License
 
-MIT: see [LICENSE](LICENSE).
+MIT: see [LICENSE](https://github.com/BiomedicalDataMining/threshscore/blob/main/LICENSE).

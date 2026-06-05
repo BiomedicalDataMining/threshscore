@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "threshscore"
-version = "0.1.0"
+version = "0.1.1"
 description = "Threshold-aware scoring and feature selection under sensitivity-specificity constraints"
 readme = "README.md"
 license = { text = "MIT" }

@@ -15,7 +15,7 @@ from threshscore.core.thresholds import ThresholdSweep, sweep_thresholds
 from threshscore.gates.base import BaseGate
 from threshscore.utils.types import ArrayLike
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "__version__",
