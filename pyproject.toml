@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "threshscore"
+version = "0.1.0"
+description = "Threshold-aware scoring and feature selection under sensitivity-specificity constraints"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Youssef Ouakrim", email = "youssef.ouakrim@teluq.ca" },
+    { name = "Neila Mezghani", email = "neila.mezghani@teluq.ca" },
+]
+keywords = ["machine-learning", "classification", "feature-selection", "scoring", "threshold", "sensitivity", "specificity", "biomedical"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.21",
+    "scikit-learn>=1.0",
+    "matplotlib>=3.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/BiomedicalDataMining/threshscore"
+Repository = "https://github.com/BiomedicalDataMining/threshscore"
+Issues = "https://github.com/BiomedicalDataMining/threshscore/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "hypothesis>=6.0",
+    "mypy>=1.0",
+    "ruff>=0.1",
+    "build>=1.0",
+    "jupyter>=1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/threshscore"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=threshscore --cov-report=term-missing --cov-fail-under=90"
+
+[tool.coverage.run]
+source = ["src/threshscore"]
+
+[tool.mypy]
+strict = true
+python_version = "3.10"
+mypy_path = "src"
+warn_unused_ignores = false
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+src = ["src"]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
